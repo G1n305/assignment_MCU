@@ -182,8 +182,8 @@ void setForHorizonLed(int red, int yellow, int green){
 			HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, SET);
 			HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, SET);
 		}
-		HAL_GPIO_WritePin(D2_GPIO_Port, D4_Pin, RESET);
-	    HAL_GPIO_WritePin(D3_GPIO_Port, D5_Pin, RESET);
+		HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET);
+	    HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, RESET);
 }
 void setPedesLeds(int red, int green, int mixed){
 	if(red == SET){
@@ -195,10 +195,10 @@ void setPedesLeds(int red, int green, int mixed){
 		HAL_GPIO_WritePin(D7_GPIO_Port, D7_Pin, SET);
 	}
 	if(mixed == SET){
-		HAL_GPIO_WritePin(D2_GPIO_Port, D6_Pin, SET);
-		HAL_GPIO_WritePin(D3_GPIO_Port, D7_Pin, SET);
+		HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, SET);
+		HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, SET);
 	}
-	HAL_GPIO_WritePin(D2_GPIO_Port, D6_Pin, RESET);
-	HAL_GPIO_WritePin(D3_GPIO_Port, D7_Pin, RESET);
+	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET);
+	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, RESET);
 }
 

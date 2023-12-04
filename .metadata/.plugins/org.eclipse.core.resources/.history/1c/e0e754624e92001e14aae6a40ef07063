@@ -11,7 +11,7 @@
 #include "main.h"
 #include "software_timer.h"
 #include "fsm_automatic.h"
-#include "scheduler.h"
+
 extern int status1;
 extern int status2;
 
