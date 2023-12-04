@@ -1,0 +1,5 @@
+global.c:148:6:setInitialValue	16	static
+global.c:152:6:countDown	4	static
+global.c:156:6:setForVerticalLed	24	static
+global.c:172:6:setForHorizonLed	24	static
+global.c:188:6:setPedesLeds	24	static

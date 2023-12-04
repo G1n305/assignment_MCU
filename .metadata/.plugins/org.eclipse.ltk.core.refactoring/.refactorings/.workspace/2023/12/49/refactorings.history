@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;MCU_Assignment&apos;" deleteContents="true" description="Delete resource &apos;MCU_Assignment&apos;" element1="/MCU_Assignment" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1701655043082"/>&#x0A;<refactoring comment="Delete resource &apos;MCU_Project/Core/Src/button.h&apos;" deleteContents="false" description="Delete resource &apos;MCU_Project/Core/Src/button.h&apos;" element1="/MCU_Project/Core/Src/button.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1701655968159"/>
+</session>
