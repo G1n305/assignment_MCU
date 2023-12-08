@@ -1,9 +1,9 @@
-14:13:28 **** Incremental Build of configuration Debug for project MCU_MPU_Assignment ****
+23:11:05 **** Incremental Build of configuration Debug for project MCU_MPU_Assignment ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/input_processing.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/input_processing.d" -MT"Core/Src/input_processing.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/input_processing.o"
 ../Core/Src/input_processing.c: In function 'fsm_button_processing':
-../Core/Src/input_processing.c:151:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  151 |     HAL_UART_Transmit(&huart2, "!SAVED#\n\r", 11, 50);
+../Core/Src/input_processing.c:148:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  148 |     HAL_UART_Transmit(&huart2, "!SAVED#\n\r", 11, 50);
       |                                ^~~~~~~~~~~~~
       |                                |
       |                                char *
@@ -14,8 +14,8 @@ In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
   749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
       |                                                                ~~~~~~~~~~~~~~~^~~~~
-../Core/Src/input_processing.c:152:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  152 |     HAL_UART_Transmit(&huart2, "\n\r", 4, 50);
+../Core/Src/input_processing.c:149:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  149 |     HAL_UART_Transmit(&huart2, "\n\r", 4, 50);
       |                                ^~~~~~
       |                                |
       |                                char *
@@ -44,5 +44,5 @@ Finished building: MCU_MPU_Assignment.bin
 Finished building: MCU_MPU_Assignment.list
  
 
-14:13:30 Build Finished. 0 errors, 2 warnings. (took 1s.961ms)
+23:11:08 Build Finished. 0 errors, 2 warnings. (took 2s.722ms)
 
