@@ -1,0 +1,36 @@
+08:26:08 **** Incremental Build of configuration Debug for project MCU_MPU_Assignment ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+../Core/Src/fsm_automatic.c: In function 'fsm_automatic':
+../Core/Src/fsm_automatic.c:27:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   27 |    HAL_UART_Transmit(&huart2, "!_____MODE1_____#\n\r", 20, 50);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/fsm_automatic.c:9:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "MCU_MPU_Assignment.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Admin\Desktop\MCU_Assignment\MCU_MPU_Assignment\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCU_MPU_Assignment.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCU_MPU_Assignment.elf
+ 
+arm-none-eabi-size   MCU_MPU_Assignment.elf 
+arm-none-eabi-objdump -h -S  MCU_MPU_Assignment.elf  > "MCU_MPU_Assignment.list"
+arm-none-eabi-objcopy  -O ihex  MCU_MPU_Assignment.elf  "MCU_MPU_Assignment.hex"
+arm-none-eabi-objcopy  -O binary  MCU_MPU_Assignment.elf  "MCU_MPU_Assignment.bin"
+   text	   data	    bss	    dec	    hex	filename
+  21488	    180	   2116	  23784	   5ce8	MCU_MPU_Assignment.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCU_MPU_Assignment.hex
+Finished building: MCU_MPU_Assignment.bin
+ 
+ 
+Finished building: MCU_MPU_Assignment.list
+ 
+
+08:26:10 Build Finished. 0 errors, 1 warnings. (took 1s.720ms)
+
